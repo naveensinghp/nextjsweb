@@ -18,7 +18,7 @@ export default function Home() {
           {/* Welcome <a href="https://nextjs.org">Naveen</a> */}
           Read {''}
           <Link href="/post/first-post">
-            <a>Post Page</a>
+            <a>Naveen Singh creed</a>
           </Link>
         </h1>
 
