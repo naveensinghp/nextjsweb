@@ -21,7 +21,7 @@ export default function Home() {
             <a>Naveen Singh creed</a>
           </Link>
         </h1>
-
+        <h2>NaveenSingh</h2>
         <p className={styles.description}>
           Get started by editing{' '}
           <code className={styles.code}>pages/index.js</code>
