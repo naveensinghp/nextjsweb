@@ -8,14 +8,14 @@
 * {
   margin: 0;
 }
-html, body {
+html, body,#__next {
   height: 100%;
   font-family: 'gilroy';
   background-color: #faf4f0;
 }
 body {
   line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
+  /*-webkit-font-smoothing: antialiased;*/
 }
 img, picture, video, canvas, svg {
   display: block;
