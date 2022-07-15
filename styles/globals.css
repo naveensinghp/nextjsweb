@@ -117,7 +117,51 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: var(--fs-400);
 }
 
+.flex{
+  display: flex;
+  gap : 1rem;
+}
+
+.primary-header{
+  align-items: center;
+  justify-content: space-between;
+}
+
+.primary-navigation{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ background: yellow;
+   backdrop-filter:  blur(1rem);
+}
+
+.primary-navigation a {
+  text-decoration: none;
+}
+
+@media (max-width: 35em){
+  .primary-navigation {
+    /*--gap : 2em;*/
+    gap:  2em;
+    position: fixed;
+    inset:  0 0 0 30%;
+   /* background: hsl(0, 0, 100% / 0.1);*/
+    background: yellow;
+    flex-direction: column;
+    padding: min(30vh, 10rem) 2em;
+    backdrop-filter:  blur(1rem);
+  }
+}
 
 
+.mobile-nav-toggle{
+  position: absolute;
+  z-index: 9999;
+  background: red;
+  width: 1rem;
+  aspect-ratio: 1;
+  top: 2em;
+  right: 2em;
+}
 
 
