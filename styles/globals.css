@@ -46,6 +46,7 @@ html, body,#__next {
 }
 body {
   line-height: 1.5;
+  overflow-x: hidden;
   /*-webkit-font-smoothing: antialiased;*/
 }
 img, picture, video, canvas, svg {
@@ -135,6 +136,10 @@ p, h1, h2, h3, h4, h5, h6 {
    backdrop-filter:  blur(1rem);
 }
 
+.mobile-nav-toggle{
+  display: none;
+}
+
 .primary-navigation a {
   text-decoration: none;
 }
@@ -151,19 +156,28 @@ p, h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
     backdrop-filter:  blur(1rem);
+    transform: translateX(50%);
   }
+
+.primary-navigation[data-visible="true"]{
+  transform: translateX(0%);
 }
 
 
-.mobile-nav-toggle{
+  .mobile-nav-toggle{
+  display: block;
   position: absolute;
   z-index: 9999;
-  background: red;
-  /*background: url('/image/ham-menu.svg');*/
-  width: 2rem;
+  /*background: red;*/
+  width: 3rem;
+  border: 0;
   aspect-ratio: 1;
   top: 2em;
   right: 2em;
 }
+}
+
+
+
 
 
