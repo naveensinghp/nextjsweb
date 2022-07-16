@@ -7,12 +7,14 @@ import { AiOutlineMenu } from 'react-icons/ai';
 const Navbar = () => {
     return (
         <header className="primary-header flex"> 
-         <button className="mobile-nav-toggle" aria-control="primary-navigation" aria-expand="false">
+        
+         <button className="mobile-nav-toggle">
          <span className="sr-only">
-            Menu
+            <AiOutlineMenu/>
          </span> 
          </button>
          
+     
             <nav>
                 <ul className="primary-navigation flex" id="primary-navigation">
                     <li>Home</li>

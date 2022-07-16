@@ -145,6 +145,7 @@ p, h1, h2, h3, h4, h5, h6 {
     gap:  2em;
     position: fixed;
     inset:  0 0 0 30%;
+    z-index: 1000;
    /* background: hsl(0, 0, 100% / 0.1);*/
     background: yellow;
     flex-direction: column;
@@ -158,7 +159,8 @@ p, h1, h2, h3, h4, h5, h6 {
   position: absolute;
   z-index: 9999;
   background: red;
-  width: 1rem;
+  /*background: url('/image/ham-menu.svg');*/
+  width: 2rem;
   aspect-ratio: 1;
   top: 2em;
   right: 2em;
