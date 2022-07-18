@@ -137,13 +137,26 @@ p, h1, h2, h3, h4, h5, h6 {
 .primary-navigation{
   list-style: none;
   padding: 0;
+  margin: 1rem;
+  background: yellow;
+  backdrop-filter:  blur(1rem);
+  font-size: 1.1em;
+}
+
+.left-navigation {
+  list-style: none;
+  padding: 0;
   margin: 0;
- background: yellow;
-   backdrop-filter:  blur(1rem);
+  background: aqua;
+  font-size: 1.1rem;
 }
 
 .mobile-nav-toggle{
   display: none;
+}
+
+.godofwar{
+  font-family: 'godofwar';
 }
 
 .primary-navigation a {
@@ -157,6 +170,7 @@ p, h1, h2, h3, h4, h5, h6 {
     position: fixed;
     inset:  0 0 0 30%;
     z-index: 1000;
+    margin: 0;
    /* background: hsl(0, 0, 100% / 0.1);*/
     background: yellow;
     flex-direction: column;
