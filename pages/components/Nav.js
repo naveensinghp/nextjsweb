@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { MdOutlineLightMode } from 'react-icons/md';
-import { AiFillSound } from 'react-icons/ai';
+import { AiFillSound,AiFillGithub,AiOutlineTwitter } from 'react-icons/ai';
 
 
 
@@ -29,12 +29,17 @@ const Navbar = () => {
             <ul className='left-navigation flex'>
                 <li><MdOutlineLightMode size={28} /></li>
                 <li><AiFillSound size={28} /> </li>
+                <li><AiFillGithub size={28} /> </li>
+                <li><AiOutlineTwitter size={28} /> </li>
             </ul>
+            <div class="flex-gap">
+                <h1>NaveenSingh</h1>
+            </div>
             <nav>
                 <ul className="primary-navigation flex" id="primary-navigation" data-visible="false">
                     <li>Home</li>
                     <li>Projects</li>
-                    <li>Skill</li>
+                    <li>My Skills </li>
                     <li>Blog</li>
                 </ul>
             </nav>
