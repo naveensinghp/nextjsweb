@@ -4,6 +4,9 @@
   --ff-body : var(--ff-primary);
   --ff-heading : var(--ff-primary);
 
+  --font-weight-bold: 600;
+  --font-weight-medium: 500;
+  --font-weight-light: 400;
 
   --fs-300 : 0.8125rem;
   --fs-400 : 1rem;
@@ -172,8 +175,15 @@ p, h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
+.nametitle{
+  font-family: var(--ff-primary);
+  padding: 0px 100px;
+}
+
 .godofwar{
   font-family: 'godofwar';
+  text-transform: uppercase;
+  letter-spacing: 1em;
 }
 
 .primary-navigation a {
