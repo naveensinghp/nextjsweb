@@ -3,7 +3,7 @@
   --ff-primary: 'gilroy' ;
   --ff-body : var(--ff-primary);
   --ff-heading : var(--ff-primary);
-
+  --color-primary: hsl(230deg, 73%, 56%);
   --font-weight-bold: 600;
   --font-weight-medium: 500;
   --font-weight-light: 400;
@@ -48,6 +48,7 @@
 html, body,#__next {
   height: 100%;
   font-family: var(--ff-primary);
+  overflow: hidden;
   /*background-color: #FFEFE6;*/
 }
 body {
@@ -135,28 +136,27 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .flex{
   display: flex;
-  gap : 1rem;
+  gap : 1.5rem;
 }
 
 .primary-header{
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
 }
 
 .primary-navigation{
   list-style: none;
   cursor: pointer;
   padding: 0;
-  margin: 1rem;
+  margin: 2rem;
   background: yellow;
   backdrop-filter:  blur(1rem);
-  font-size: 1.1em;
-  float: right;
+  font-size: 1.2em;
   margin-right: 100px;
 }
 
-.left-navigation {
-  padding: 0 100px;
+.socialmedia-navigation {
   line-height: 80px;
   background: aqua;
   font-size: 1.1rem;
@@ -177,7 +177,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .nametitle{
   font-family: var(--ff-primary);
-  padding: 0px 100px;
+  padding: 0px 22rem;
+  color: var(--color-primary);
+  font-size: 13px;
+  letter-spacing: 2px;
 }
 
 .godofwar{
@@ -195,6 +198,15 @@ p, h1, h2, h3, h4, h5, h6 {
   --padding: 1rem;
   width: min(var(--max-width, 100%));
   margin-inline: auto;
+}
+
+.nameintro{
+  padding: 0px 22rem;
+  font-size: 2.3rem;
+}
+
+.tetsName{
+  color: #e91e63;
 }
 
 /* Mobile view */
