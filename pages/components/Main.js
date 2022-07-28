@@ -1,5 +1,5 @@
-import { MdOutlineLightMode } from 'react-icons/md';
-import { AiFillSound,AiFillGithub,AiOutlineTwitter,AiFillLinkedin } from 'react-icons/ai';
+import { AiFillGithub,AiOutlineTwitter,AiFillLinkedin } from 'react-icons/ai';
+import Image from 'next/image'
 
 const MainContent = () => {
     return (
@@ -14,6 +14,12 @@ const MainContent = () => {
                 <li><AiFillGithub size={28} /> </li>
                 <li><AiFillLinkedin size={28} /></li>
             </ul>
+            <div>
+            <span className=''>
+                {/* <Image src="/assets/images/banner_test.png" alt="Vercel Logo" width={1092} height={842} /> */}
+                <img src='/assets/images/banner_test.png' width={500}/>
+            </span>
+            </div>
         </div>
     );
 }

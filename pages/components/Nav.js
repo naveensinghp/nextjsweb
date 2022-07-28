@@ -10,16 +10,6 @@ import React, { useState } from 'react'
 
 
 const Navbar = () => {
-    // function navStyle(){
-    //     const primaryNav = document.querySelector('primary-navigation');
-    //     const navToggle = document.querySelector('mobile-nav-toggle');
-    //     console.log(primaryNav);
-    //     if(primaryNav){
-    //        navToggle.addEventListener('click',() => {
-    //         const visibility = primaryNav.getAttribute('data-visible');
-    //     }) 
-    //     }
-    // }
     const clickData = () => {
         alert('clicked');
     }
@@ -27,8 +17,6 @@ const Navbar = () => {
     function toggle(){
         setShowMe(!showMe);
     }
-    // Defautl Sunlight
-    // When toggle darkmode 
     return (
         <header className="primary-header flex"> 
             <div className="mobile-nav-toggle">
@@ -39,10 +27,11 @@ const Navbar = () => {
             <div className="nametitle">
                 <h1>#Dev</h1>
             </div>
+             {/* Toggle Test mode
             Dark Mode {showMe}
-            <div style={{display: showMe? "block": "none"}}>
+           <div style={{display: showMe? "block": "none"}}>
                  <MdOutlineDarkMode size={20} />
-            </div>
+            </div> */}
             
             <nav>
                 <ul className="primary-navigation flex" id="primary-navigation" data-visible="false">
@@ -51,9 +40,9 @@ const Navbar = () => {
                     <li>My Skills </li>
                     <li>Blog</li>
                     <li>
-                        <MdOutlineLightMode size={20} onClick= {toggle} />
+                        <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
+                        <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/>
                     </li>
-                    {/* <li><MdOutlineDarkMode size={20} /> </li> */}
                     <li><AiFillSound size={22} /> </li>
                 </ul>
             </nav>
