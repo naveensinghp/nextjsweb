@@ -4,6 +4,7 @@
   --ff-body : var(--ff-primary);
   --ff-heading : var(--ff-primary);
   --color-primary: hsl(230deg, 73%, 56%);
+  --color-text: hsl(222deg, 22%, 5%);
   --font-weight-bold: 600;
   --font-weight-medium: 500;
   --font-weight-light: 400;
@@ -54,7 +55,7 @@ html, body,#__next {
 body {
   line-height: 1.5;
   overflow-x: hidden;
-  /*-webkit-font-smoothing: antialiased;*/
+  -webkit-font-smoothing: antialiased;
 }
 html:focus-within{
   scroll-behavior: smooth;
@@ -150,10 +151,12 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   padding: 0;
   margin: 2rem;
-  background: yellow;
+  /* background: yellow; */
   backdrop-filter:  blur(1rem);
   font-size: 1.2em;
   margin-right: 100px;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
 }
 
 .socialmedia-navigation {
@@ -201,12 +204,21 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .nameintro{
-  padding: 0px 22rem;
+  padding: 4rem 22rem;
   font-size: 2.3rem;
 }
 
 .tetsName{
   color: #e91e63;
+}
+
+::selection {
+  background-color: var(--selection-background,var(--color-primary));
+  color: var(--selection-text,white);
+  -webkit-text-fill-color: var(--selection-text) !important;
+  background-image: none !important;
+  background-clip: revert !important;
+  text-shadow: none !important;
 }
 
 /* Mobile view */
@@ -232,7 +244,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 
-  .mobile-nav-toggle{
+.mobile-nav-toggle {
   display: block;
   position: absolute;
   z-index: 9999;
@@ -243,6 +255,7 @@ p, h1, h2, h3, h4, h5, h6 {
   top: 2em;
   right: 2em;
 }
+
 }
 
 
