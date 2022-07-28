@@ -1,9 +1,9 @@
 // import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { MdOutlineLightMode } from 'react-icons/md';
-import { AiFillSound,AiFillGithub,AiOutlineTwitter } from 'react-icons/ai';
-import React from 'react'
+import { MdOutlineLightMode,MdOutlineDarkMode } from 'react-icons/md';
+import { AiFillSound} from 'react-icons/ai';
+import React, { useState } from 'react'
 
 
 
@@ -23,6 +23,12 @@ const Navbar = () => {
     const clickData = () => {
         alert('clicked');
     }
+    const [showMe, setShowMe] = useState(false);
+    function toggle(){
+        setShowMe(!showMe);
+    }
+    // Defautl Sunlight
+    // When toggle darkmode 
     return (
         <header className="primary-header flex"> 
             <div className="mobile-nav-toggle">
@@ -31,21 +37,23 @@ const Navbar = () => {
                 </span> 
             </div>
             <div className="nametitle">
-                <h1>NaveenSingh</h1>
+                <h1>#Dev</h1>
             </div>
-            {/* <ul className='left-navigation flex'>
-                <li><MdOutlineLightMode size={28} /></li>
-                <li><AiFillSound size={28} /> </li>
-                <li><AiFillGithub size={28} /> </li>
-                <li><AiOutlineTwitter size={28} /> </li>
-            </ul> */}
+            Dark Mode {showMe}
+            <div style={{display: showMe? "block": "none"}}>
+                 <MdOutlineDarkMode size={20} />
+            </div>
+            
             <nav>
                 <ul className="primary-navigation flex" id="primary-navigation" data-visible="false">
                     <li>Home</li>
                     <li>Projects</li>
                     <li>My Skills </li>
                     <li>Blog</li>
-                    <li><MdOutlineLightMode size={20} /></li>
+                    <li>
+                        <MdOutlineLightMode size={20} onClick= {toggle} />
+                    </li>
+                    {/* <li><MdOutlineDarkMode size={20} /> </li> */}
                     <li><AiFillSound size={22} /> </li>
                 </ul>
             </nav>
