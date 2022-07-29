@@ -1,4 +1,9 @@
 :root{
+  --clr-dark : #00332a;
+  --clr-light: white;
+  --foreground: var(--clr-dark);
+  --background: var(--clr-light);
+  
   --clr-primary-400: #FFEFE6;
   --ff-primary: 'gilroy' ;
   --ff-body : var(--ff-primary);
@@ -21,6 +26,14 @@
   --fs-primary-heading: var(--fs-800);
   --fs-seondary-heading: var(--fs-800);
 
+}
+
+@media(prefers-color-scheme: dark){
+  :root{
+    --clr-primary-400: #202302;
+    --background: var(--clr-dark);
+    --foreground: var(--clr-light);
+  }
 }
 
 @media (min-width: 50em){
@@ -54,6 +67,8 @@ html, body,#__next {
 }
 body {
   line-height: 1.5;
+  background: var(--background);
+  color: var(--foreground);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -78,6 +93,9 @@ p, h1, h2, h3, h4, h5, h6 {
 .darkyellow{
   background-color: #f6eade;
 }
+
+
+
 
 @font-face {
   font-family: 'gilroy';
@@ -156,7 +174,7 @@ p, h1, h2, h3, h4, h5, h6 {
   font-size: 1.2em;
   margin-right: 100px;
   font-weight: var(--font-weight-medium);
-  color: var(--color-text);
+  color: var(--foreground);
 }
 
 .socialmedia-navigation {
