@@ -25,7 +25,7 @@ const Navbar = () => {
                 </span> 
             </div>
             <div className="nametitle">
-                <h1>#Dev</h1>
+                <h1>naveensingh.dev</h1>
             </div>
              {/* Toggle Test mode
             Dark Mode {showMe}

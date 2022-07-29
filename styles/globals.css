@@ -182,8 +182,8 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-primary);
   padding: 0px 22rem;
   color: var(--color-primary);
-  font-size: 13px;
-  letter-spacing: 2px;
+  font-size: 12px;
+  letter-spacing: 0.9px;
 }
 
 .godofwar{
