@@ -28,7 +28,7 @@
 
 }
 
-@media(prefers-color-scheme: dark){
+@media(prefers-color-scheme: light){
   :root{
     --clr-primary-400: #202302;
     --background: var(--clr-dark);
@@ -244,6 +244,56 @@ p, h1, h2, h3, h4, h5, h6 {
   background-image: none !important;
   background-clip: revert !important;
   text-shadow: none !important;
+}
+
+.footerworld{
+  position: relative;
+  background: #FFEFE6;
+  color : black;
+  display: flex;
+  min-height: 400px;
+  padding: 200px 20vw;
+}
+
+.curve{
+  position: absolute;
+  height: 225px;
+  width: 100%;
+  bottom: 0;
+}
+
+.curve::before{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #202731;
+  transform: translate(85%,60%);
+}
+
+.curve::after{
+  content: '';
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  transform: translate(-4%,40%);
+  z-index: -1;
+}
+.footersecond::after{
+    content: '';
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    position: absolute;
+    bottom: 0;
+    height: 85%;
+    width: 100%;
+    background-color: #202731;
+    z-index: -1;
 }
 
 /* Mobile view */

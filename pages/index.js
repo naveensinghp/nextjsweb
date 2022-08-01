@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import Nav from './components/Nav'
 import MainContent from './components/Main'
+import Footer from './components/Footer'
 
 
 export default function Home(){
@@ -11,6 +12,7 @@ export default function Home(){
     <>
       <Nav/>
       <MainContent/>
+      <Footer/>
     </>
   );
 }
