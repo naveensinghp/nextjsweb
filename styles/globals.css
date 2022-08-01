@@ -1,5 +1,5 @@
 :root{
-  --clr-dark : #00332a;
+  --clr-dark : hsl(210deg, 30%, 8%);
   --clr-light: white;
   --foreground: var(--clr-dark);
   --background: var(--clr-light);
@@ -35,6 +35,8 @@
     --foreground: var(--clr-light);
   }
 }
+
+
 
 @media (min-width: 50em){
   :root{
@@ -230,6 +232,11 @@ p, h1, h2, h3, h4, h5, h6 {
   color: #e91e63;
 }
 
+.banner-right{
+  display: flex;
+  justify-content: flex-start;
+}
+
 ::selection {
   background-color: var(--selection-background,var(--color-primary));
   color: var(--selection-text,white);
@@ -249,12 +256,13 @@ p, h1, h2, h3, h4, h5, h6 {
     inset:  0 0 0 30%;
     z-index: 1000;
     margin: 0;
-   /* background: hsl(0, 0, 100% / 0.1);*/
+    /* background: var(--background); */
     background: yellow;
     flex-direction: column;
     padding: min(30vh, 10rem) 2em;
     backdrop-filter:  blur(1rem);
     transform: translateX(50%);
+    color: var(--foreground);
   }
 
 .primary-navigation[data-visible="true"]{

@@ -9,9 +9,9 @@ const MainContent = () => {
                     <div>Hello! I'm <span className="tetsName">
                         NaveenSingh</span>
                     </div>
-                    <div>
+                    <p>
                         Front End Developer
-                    </div>
+                    </p>
                     <ul className='socialmedia-navigation flex'>
                         <li><AiOutlineTwitter size={28} /> </li>
                         <li><AiFillGithub size={28} /> </li>
