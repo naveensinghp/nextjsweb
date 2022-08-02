@@ -4,6 +4,8 @@ import { AiOutlineMenu } from 'react-icons/ai';
 import { MdOutlineLightMode,MdOutlineDarkMode } from 'react-icons/md';
 import { AiFillSound} from 'react-icons/ai';
 import React, { useState } from 'react'
+import Script from 'next/script'
+
 
 
 
