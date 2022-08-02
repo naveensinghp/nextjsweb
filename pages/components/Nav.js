@@ -26,9 +26,26 @@ const Navbar = () => {
                     <AiOutlineMenu onClick={clickData} size={35}/>
                 </span> 
             </div>
-            <div className="nametitle">
+            {/* <div className="nametitle">
                 <h1>naveensingh.dev</h1>
+                <span className='test'></span>
+            </div> */}
+            {/* <div stylename={'display:flex;'}>
+                <div className='test'> </div>
+                <div className="nametitle">
+                <h1>naveensingh.dev</h1>
+                
             </div>
+            </div> */}
+            {/* Parent Div*/}
+            <div className='namemain'>
+                <div className='lineone'></div>
+                <div className=""><h1>naveensingh.dev</h1></div>
+                <div className='lineone'></div>
+            </div>
+
+           
+
              {/* Toggle Test mode
             Dark Mode {showMe}
            <div style={{display: showMe? "block": "none"}}>

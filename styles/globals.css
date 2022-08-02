@@ -248,13 +248,36 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .footerworld{
   position: relative;
-  background: #FFEFE6;
-  color : black;
+  background: #10C2B4;
+  color : white;
   display: flex;
   min-height: 400px;
   padding: 200px 20vw;
 }
+.test{
+  border: 3px solid #10C2B4;
+  border-radius: 5px;
+}
 
+.namemain{
+  display: flex;
+
+  gap: 10px;
+}
+.lineone{
+  margin: 0;
+  padding: auto;
+  border: 3px solid #10C2B4;
+  border-radius: 5px;
+  height: 0;
+  width: 20rem;
+  align-self: center;
+}
+.linetwo{
+  border: 3px solid #10C2B4;
+  border-radius: 5px;
+  width: 20rem;
+}
 .curve{
   position: absolute;
   height: 225px;
