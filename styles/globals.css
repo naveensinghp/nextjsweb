@@ -73,6 +73,9 @@ body {
   color: var(--foreground);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 html:focus-within{
   scroll-behavior: smooth;
@@ -171,10 +174,10 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   padding: 0;
   margin: 2rem;
-  /* background: yellow; */
+  background: yellow;
   backdrop-filter:  blur(1rem);
   font-size: 1.2em;
-  margin-right: 100px;
+  margin-right: 21rem;
   font-weight: var(--font-weight-medium);
   color: var(--foreground);
 }
@@ -247,11 +250,10 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .footerworld{
+  margin-top: auto;
   position: relative;
   background: #10C2B4;
   color : white;
-  display: flex;
-  min-height: 400px;
   padding: 200px 20vw;
 }
 .test{
@@ -265,6 +267,14 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 10px;
 }
 .lineone{
+  border: 3px solid #10C2B4;
+  border-radius: 5px;
+  height: 0;
+  width: 8rem;
+  align-self: center;
+  margin-left: 13rem;
+}
+.linetwo{
   margin: 0;
   padding: auto;
   border: 3px solid #10C2B4;
@@ -272,11 +282,6 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 0;
   width: 20rem;
   align-self: center;
-}
-.linetwo{
-  border: 3px solid #10C2B4;
-  border-radius: 5px;
-  width: 20rem;
 }
 .curve{
   position: absolute;

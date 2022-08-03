@@ -8,6 +8,7 @@ const MainContent = () => {
                 <div className="nameintro">
                     <div>Hello! I'm <span className="tetsName">
                         NaveenSingh</span>
+                       
                     </div>
                     <p>
                         Front End Developer
