@@ -174,11 +174,11 @@ p, h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
   padding: 0;
   margin: 2rem;
-  background: yellow;
+  /* background: yellow; */
   backdrop-filter:  blur(1rem);
   font-size: 1.2em;
   margin-right: 21rem;
-  font-weight: var(--font-weight-medium);
+  font-weight: var(--font-weight-bold);
   color: var(--foreground);
 }
 
@@ -232,7 +232,12 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .tetsName{
-  color: #e91e63;
+  /* color: #e91e63; */
+  background: linear-gradient(red,blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+
 }
 
 .banner-right{
