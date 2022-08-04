@@ -5,6 +5,8 @@ import { MdOutlineLightMode,MdOutlineDarkMode } from 'react-icons/md';
 import { AiFillSound} from 'react-icons/ai';
 import React, { useState } from 'react'
 import Script from 'next/script'
+import styled from 'styled-components';
+// import { COLORS, WEIGHTS } from '../constant';
 
 
 
@@ -41,7 +43,7 @@ const Navbar = () => {
             <div className='namemain'>
                 <div className='lineone'></div>
                 <div className=""><h1>naveensingh.dev</h1></div>
-                <div className='lineone'></div>
+                <div className='linetwo'></div>
             </div>
 
            
@@ -53,11 +55,15 @@ const Navbar = () => {
             </div> */}
             
             <nav>
-                <ul className="primary-navigation flex" id="primary-navigation" data-visible="false">
+                <ul className="primary-navigation flex">
+               
                     <li>Home</li>
                     <li>Projects</li>
                     <li>My Skills </li>
                     <li>Blog</li>
+                    <Link href="/about">
+                        <a>Myself</a>
+                    </Link>
                     <li>
                         <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
                         <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/>
@@ -65,8 +71,24 @@ const Navbar = () => {
                     <li><AiFillSound size={22} /> </li>
                 </ul>
             </nav>
+           
         </header>
     );
+
+    
 }
+
+const Nav = styled.nav``;
+const NavLink = styled.a`
+  font-size: 1.125rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: teal;
+  font-weight: 900;
+
+  &:first-of-type {
+    color: red;
+  }
+`;
 
 export default Navbar
