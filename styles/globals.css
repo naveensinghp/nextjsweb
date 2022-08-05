@@ -232,10 +232,11 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .tetsName{
-  /* color: #e91e63; */
-  background: linear-gradient(red,blue);
+   color: #e91e63;
+   text-decoration: underline wavy hotpink; 
+  /*background: linear-gradient(red,blue);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;*/
   
 
 }
