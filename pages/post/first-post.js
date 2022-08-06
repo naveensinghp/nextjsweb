@@ -4,6 +4,8 @@ import Head from 'next/head';
 import Script from 'next/script';
 import { Button } from '@cred/neopop-web/lib/components';
 import React, { Component } from 'react'
+import styled from 'styled-components';
+
 
 
 // export default function FirstPost(){

@@ -57,13 +57,16 @@ const Navbar = () => {
             <nav>
                 <ul className="primary-navigation flex">
                
-                    <li>Home</li>
-                    <li>Projects</li>
-                    <li>My Skills </li>
-                    <li>Blog</li>
-                    <Link href="/about">
-                        <a>Myself</a>
+                    <Link href="/">
+                        <a>Home</a>
                     </Link>
+                    <li>Projects</li>
+                    {/* <li>My Skills </li> */}
+                    <li>Blogs</li>
+                    <li>About me</li>
+                    {/* <Link href="/cars">
+                        <a>About me</a>
+                    </Link> */}
                     <li>
                         <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
                         <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/>
