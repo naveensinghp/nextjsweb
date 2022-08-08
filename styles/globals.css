@@ -177,7 +177,7 @@ p, h1, h2, h3, h4, h5, h6 {
   /* background: yellow; */
   backdrop-filter:  blur(1rem);
   font-size: 1.2em;
-  margin-right: 21rem;
+  margin-right: 20rem;
   font-weight: var(--font-weight-bold);
   color: var(--foreground);
 }
@@ -233,12 +233,10 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .tetsName{
    color: #e91e63;
-   text-decoration: underline wavy hotpink; 
+   /* text-decoration: underline wavy hotpink;  */
   /*background: linear-gradient(red,blue);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;*/
-  
-
 }
 
 .banner-right{
@@ -328,6 +326,25 @@ p, h1, h2, h3, h4, h5, h6 {
     width: 100%;
     background-color: #202731;
     z-index: -1;
+}
+.custom-shape-divider-top-1659979959 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1659979959 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 182px;
+}
+
+.custom-shape-divider-top-1659979959 .shape-fill {
+  fill: #FFFFFF;
 }
 
 /* Mobile view */
