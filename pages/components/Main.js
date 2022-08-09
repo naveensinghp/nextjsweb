@@ -13,6 +13,7 @@ const MainContent = () => {
                     <p>
                         Front End Developer
                     </p>
+                    
                     <ul className='socialmedia-navigation flex'>
                         <li><AiOutlineTwitter size={28} /> </li>
                         <li><AiFillGithub size={28} /> </li>
