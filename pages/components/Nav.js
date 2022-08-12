@@ -7,13 +7,13 @@ import React, { useState } from 'react'
 import Script from 'next/script'
 import styled from 'styled-components';
 // import { COLORS, WEIGHTS } from '../constant';
-
-
+import { useRouter } from 'next/router';
 
 
 
 
 const Navbar = () => {
+    const router = useRouter();
     const clickData = () => {
         alert('clicked');
     }
@@ -56,20 +56,17 @@ const Navbar = () => {
             
             <nav>
                 <ul className="primary-navigation flex">
-               
-                    <Link href="/">
-                        <a>Home</a>
+                    <Link href="/"><a>Home</a></Link>
+                    <Link href="/projects">
+                        <a className={router.asPath == "/projects" ? "menuactive" : ""}>Projects</a>
                     </Link>
-                    <li>Projects</li>
-                    {/* <li>My Skills </li> */}
-                    {/* <li>Blogs</li> */}
-                    <Link href="/blogs">
-                        <a>Blogs</a>
+                    <Link href="/blogs"> 
+                        <a className={router.asPath == "/blogs" ? "menuactive" : ""}>Blogs</a>
                     </Link>
-                    <li>About me</li>
-                    {/* <Link href="/cars">
-                        <a>About me</a>
-                    </Link> */}
+                    <Link href="/blogs"> 
+                        <a className={router.asPath == "/about" ? "menuactive" : ""}>About me</a>
+                    </Link>
+                    <li></li>
                     <li>
                         <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
                         <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/>
