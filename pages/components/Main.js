@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 const MainContent = () => {
     return (
-        <div className="">
+        <div className="cursor">
             <div className='banner-right'>
                 <div className="nameintro">
                     <div>Hello! I'm <span className="tetsName">
