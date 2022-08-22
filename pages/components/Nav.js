@@ -20,43 +20,34 @@ const Navbar = () => {
     const [showMe, setShowMe] = useState(false);
     function toggle(){
         setShowMe(!showMe);
+        // show true means => sunlight
+        if(showMe){
+            document.body.classList.add('darkmode');
+            localStorage.setItem('darkMode',"enabled");
+        }
+        if(!showMe){
+            document.body.classList.remove('darkmode');
+            localStorage.setItem('darkMode',null);
+        }
+        // console.log('Show',showMe);
     }
+    // let darkmode = localStorage.getItem('darkmode');
+    // const darkModeToggle = document.querySelector('#dark-mode-toggle');
+    // darkModeToggle.addEventListener('click',() => {
+    //     console.log('Test');
+    // })
     return (
-        
-
-
         <header className="primary-header flex"> 
             <div className="mobile-nav-toggle">
                 <span className="sr-only">
                     <AiOutlineMenu onClick={clickData} size={35}/>
                 </span> 
             </div>
-            {/* <div className="nametitle">
-                <h1>naveensingh.dev</h1>
-                <span className='test'></span>
-            </div> */}
-            {/* <div stylename={'display:flex;'}>
-                <div className='test'> </div>
-                <div className="nametitle">
-                <h1>naveensingh.dev</h1>
-                
-            </div>
-            </div> */}
-            {/* Parent Div*/}
             <div className='namemain'>
                 <div className='lineone'></div>
                 <div className=""><h1>naveensingh.dev</h1></div>
                 <div className='linetwo'></div>
             </div>
-
-           
-
-             {/* Toggle Test mode
-            Dark Mode {showMe}
-           <div style={{display: showMe? "block": "none"}}>
-                 <MdOutlineDarkMode size={20} />
-            </div> */}
-            
             <nav>
                 <ul className="primary-navigation flex">
                     <Link href="/"><a>Home</a></Link>
