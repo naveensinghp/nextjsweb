@@ -6,7 +6,6 @@ import { AiFillSound} from 'react-icons/ai';
 import React, { useState } from 'react'
 import Script from 'next/script'
 import styled from 'styled-components';
-// import { COLORS, WEIGHTS } from '../constant';
 import { useRouter } from 'next/router';
 
 
@@ -57,7 +56,7 @@ const Navbar = () => {
                     <Link href="/blogs"> 
                         <a className={router.asPath == "/blogs" ? "menuactive" : ""}>Blogs</a>
                     </Link>
-                    <Link href="/blogs"> 
+                    <Link href="/about"> 
                         <a className={router.asPath == "/about" ? "menuactive" : ""}>About me</a>
                     </Link>
                     <li></li>
@@ -68,6 +67,7 @@ const Navbar = () => {
                     <li><AiFillSound size={22} /> </li>
                 </ul>
             </nav>
+           
            
         </header>
     );
