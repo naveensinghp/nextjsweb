@@ -36,7 +36,9 @@ const Navbar = () => {
     //     console.log('Test');
     // })
     return (
-        <header className="primary-header flex"> 
+        <div>
+             <img id="shape_top" src="https://lukaszadam.com/assets/images/shape_top.svg" alt="free illustration shape"></img>
+             <header className="primary-header flex"> 
             <div className="mobile-nav-toggle">
                 <span className="sr-only">
                     <AiOutlineMenu onClick={clickData} size={35}/>
@@ -44,7 +46,7 @@ const Navbar = () => {
             </div>
             <div className='namemain'>
                 <div className='lineone'></div>
-                <div className=""><h1>naveensingh.dev</h1></div>
+                <div className=""><h1>aveensingh.dev</h1></div>
                 <div className='linetwo'></div>
             </div>
             <nav>
@@ -67,9 +69,8 @@ const Navbar = () => {
                     <li><AiFillSound size={22} /> </li>
                 </ul>
             </nav>
-           
-           
         </header>
+        </div>
     );
 
     

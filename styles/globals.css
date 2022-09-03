@@ -303,6 +303,25 @@ a:nth-child(4){
   /* transform: scale(0); */
 }
 
+
+.testt::after{
+  content: 'fef';
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  bottom: 0;
+  height: 2px;
+  background-color: #e91e63;
+}
+/* .testt::after{
+  background-color: #e91e63;
+}
+
+.testt::before{
+  content: 'Read this';
+  background-color: #e91e63;
+} */
+
 .cursor{
   position: fixed;
   width: 50px;

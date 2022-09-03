@@ -17,6 +17,7 @@ export default function Home(){
   // );
   return (
     <div className="">
+        <div className="testt">Arya Stark</div>
         <div className='banner-right'>
             <div className="nameintro">
                 <div>Hello! I'm <span className="tetsName">
@@ -24,7 +25,7 @@ export default function Home(){
                    
                 </div>
                 <p>
-                    Front End Developer
+                    ront End Developer
                 </p>
                 
                 <ul className='socialmedia-navigation flex'>
