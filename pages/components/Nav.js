@@ -46,7 +46,7 @@ const Navbar = () => {
             </div>
             <div className='namemain'>
                 <div className='lineone'></div>
-                <div className=""><h1>aveensingh.dev</h1></div>
+                <div className=""><h1>naveensingh.dev</h1></div>
                 <div className='linetwo'></div>
             </div>
             <nav>

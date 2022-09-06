@@ -17,15 +17,21 @@ export default function Home(){
   // );
   return (
     <div className="">
-        <div className="testt">Arya Stark</div>
+        <span className="underline">Arya Stark</span>
+        <a href='' className='KwErY'>
+        <span class="hKeEVN">NaveenSingh</span>
+        <span class="igzQz">NaveenSingh</span>
+    
+        </a>
+        
         <div className='banner-right'>
             <div className="nameintro">
-                <div>Hello! I'm <span className="tetsName">
-                    NaveenSingh</span>
+                <div>Hello! I'm 
+                    <span className="myNameTitle"> NaveenSingh</span>
                    
                 </div>
                 <p>
-                    ront End Developer
+                    Front End Developer
                 </p>
                 
                 <ul className='socialmedia-navigation flex'>
