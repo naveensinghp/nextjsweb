@@ -72,14 +72,14 @@
 html, body,#__next {
   height: 100%;
   font-family: var(--ff-primary);
-  overflow: hidden;
+  /* overflow-y: hidden; */
   /*background-color: #FFEFE6;*/
 }
 body {
   line-height: 1.5;
   background: var(--background);
   color: var(--foreground);
-  overflow-x: hidden;
+  /* overflow-y: hidden; */
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
   display: flex;
