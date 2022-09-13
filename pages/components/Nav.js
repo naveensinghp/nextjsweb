@@ -7,7 +7,7 @@ import React, { useState } from 'react'
 import Script from 'next/script'
 import styled from 'styled-components';
 import { useRouter } from 'next/router';
-
+import { BREAKPOINTS,HEADER_HEIGHT } from '../constants';
 
 
 
@@ -28,13 +28,7 @@ const Navbar = () => {
             document.body.classList.remove('darkmode');
             localStorage.setItem('darkMode',null);
         }
-        // console.log('Show',showMe);
     }
-    // let darkmode = localStorage.getItem('darkmode');
-    // const darkModeToggle = document.querySelector('#dark-mode-toggle');
-    // darkModeToggle.addEventListener('click',() => {
-    //     console.log('Test');
-    // })
     return (
         <div>
              <img id="shape_top" src="https://lukaszadam.com/assets/images/shape_top.svg" alt="free illustration shape"></img>
@@ -49,44 +43,50 @@ const Navbar = () => {
                 <div className=""><h1>naveensingh.dev</h1></div>
                 <div className='linetwo'></div>
             </div>
-            <nav>
-                <ul className="primary-navigation flex">
-                    <Link href="/"><a>Home</a></Link>
-                    <Link href="/projects">
-                        <a className={router.asPath == "/projects" ? "menuactive" : ""}>Projects</a>
-                    </Link>
-                    <Link href="/blogs"> 
-                        <a className={router.asPath == "/blogs" ? "menuactive" : ""}>Blogs</a>
-                    </Link>
-                    <Link href="/about"> 
-                        <a className={router.asPath == "/about" ? "menuactive" : ""}>About me</a>
-                    </Link>
-                    <li></li>
-                    <li>
-                        <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
-                        <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/>
-                    </li>
-                    <li><AiFillSound size={22} /> </li>
-                </ul>
-            </nav>
+            <InnerWrapper>
+                <DesktopOnly>
+                    <Navigation>
+                        <ul className="primary-navigation flex">
+                            <Link href="/"><a>Home</a></Link>
+                            <Link href="/projects">
+                                <a className={router.asPath == "/projects" ? "menuactive" : ""}>rojects</a>
+                            </Link>
+                            <Link href="/blogs"> 
+                                <a className={router.asPath == "/blogs" ? "menuactive" : ""}>Blogs</a>
+                            </Link>
+                            <Link href="/about"> 
+                                <a className={router.asPath == "/about" ? "menuactive" : ""}>About me</a>
+                            </Link>
+                            <li></li>
+                            <li>
+                                <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
+                                <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/>
+                            </li>
+                            <li><AiFillSound size={22} /> </li>
+                        </ul>
+                    </Navigation>
+                </DesktopOnly>
+            </InnerWrapper>
         </header>
-        </div>
-    );
-
-    
+    </div>
+    );   
 }
-
-const Nav = styled.nav``;
-const NavLink = styled.a`
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: teal;
-  font-weight: 900;
-
-  &:first-of-type {
-    color: red;
+const DesktopOnly = styled.span`
+  @media ${BREAKPOINTS.sm} {
+    display: none;
   }
+`;
+
+
+const Navigation = styled.ul`
+  display: flex;
+`;
+
+const InnerWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: ${HEADER_HEIGHT}px;
 `;
 
 export default Navbar

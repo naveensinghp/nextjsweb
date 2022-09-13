@@ -3,11 +3,14 @@ import Image from 'next/image'
 
 const MainContent = () => {
     return (
+        <>
+         <Nav/>
+       
         <div className="">
             <div className='banner-right'>
                 <div className="nameintro">
                     <div>Hello! I'm <span className="tetsName">
-                        NaveenSingh</span>
+                        NaveenSing</span>
                        
                     </div>
                     <p>
@@ -25,6 +28,7 @@ const MainContent = () => {
             <img src='/assets/images/banner_test.png' width={500}/>
         </div>
     </div>
+    </>
     );
 }
 

@@ -56,7 +56,7 @@ export const COLORS = {
     white: '#FFF',
     black: '#000',
   };
-
+export const HEADER_HEIGHT = 60;
 export const UNIT = 8;
 export const BREAKPOINT_SIZES = {
     xs: 320,
