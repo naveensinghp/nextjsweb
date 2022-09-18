@@ -49,7 +49,7 @@ const Navbar = () => {
                         <ul className="primary-navigation flex">
                             <Link href="/"><a>Home</a></Link>
                             <Link href="/projects">
-                                <a className={router.asPath == "/projects" ? "menuactive" : ""}>rojects</a>
+                                <a className={router.asPath == "/projects" ? "menuactive" : ""}>Projects</a>
                             </Link>
                             <Link href="/blogs"> 
                                 <a className={router.asPath == "/blogs" ? "menuactive" : ""}>Blogs</a>

@@ -10,6 +10,7 @@ import Paragraph from './components/Paragraph/Paragraph';
 import styled from 'styled-components';
 import Underline from './components/Underline/Underline';
 import Footer from './components/Footer/Footer';
+import { BREAKPOINTS } from './constants';
 
 
 
@@ -30,13 +31,14 @@ export default function Home(){
         <TextLink href="#">
                 Testingh
         </TextLink>
-        
+       
         <div className='banner-right'>
             <div className="nameintro">
                 <div>Hello! I'm 
-                    <span className="myNameTitle"> AryaStark ✨</span>
-                   
+                    {/* <span className="myNameTitle"> AryaStark ✨</span> */}
+                    <Title>Naveensingh</Title>
                 </div>
+                
                 <p>
                     Front End Developer
                 </p>
@@ -107,3 +109,15 @@ export default function Home(){
 );
 
 }
+
+const Title = styled.h1`
+  margin-bottom: 48px;
+  font-size: 3.4rem;
+  font-weight: 900;
+  letter-spacing: -2.4px;
+
+  @media ${BREAKPOINTS.sm} {
+    font-size: 3.5rem;
+    letter-spacing: -1px;
+  }
+`;
