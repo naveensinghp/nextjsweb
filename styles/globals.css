@@ -108,7 +108,14 @@ p, h1, h2, h3, h4, h5, h6 {
   background-color: #f6eade;
 }
 
-
+.maincontainer{
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 20%;
+  padding-right: 20%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
 
 
 @font-face {
@@ -193,7 +200,7 @@ p, h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   color: #000;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: bolder;
 }
 
 .primary-navigation{

@@ -1,11 +1,10 @@
 import Link from 'next/link';
-import React from 'react'
 import styled from 'styled-components';
 import { COLORS,BREAKPOINTS } from '../../constants'
 import { useRouter } from 'next/router';
 import { AiOutlineMenu } from 'react-icons/ai';
-
-
+import { MdOutlineLightMode,MdOutlineDarkMode } from 'react-icons/md';
+import React, { useState } from 'react'
 
 const clickData = () => {
   alert('clicked');
@@ -13,6 +12,10 @@ const clickData = () => {
 
 
 const Header = () => {
+  const [showMe, setShowMe] = useState(false);
+  function toggle(){
+    setShowMe(!showMe);
+  }
   return (
     // <div>
     //     <OuterWrapper>
@@ -35,21 +38,24 @@ const Header = () => {
     //         </MobileOnly>
     //     </OuterWrapper>
     // </div>
-    <Container>
       <Navbars>
-          <Logos>
-            <h4>naveensingh.dev</h4>
-          </Logos>
+          <Name>
+            <h3>naveensingh.dev</h3>
+          </Name>
           <Nav>
-            <ul   className="ulk">
-              <li className="ulk_li"><a href=""> Home</a></li>
-              <li className="ulk_li"><a href=""> Projects</a></li>
-              <li className="ulk_li"><a href=""> Blogs</a></li>
-              <li className="ulk_li"><a href=""> Right Now</a></li>
+            <ul className="ulk">
+              <li className="ulk_li"><a href="#"> Home</a></li>
+              <li className="ulk_li"><a href="#"> Projects</a></li>
+              <li className="ulk_li"><a href="#"> Blogs</a></li>
+              <li className="ulk_li"><a href="#"> Now</a></li>
+              <li className="ulk_li">
+                <MdOutlineLightMode size={20}/>
+                {/* <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
+                <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/> */}
+              </li>
           </ul>
           </Nav>
       </Navbars>
-    </Container>
   );
 }
 
@@ -58,32 +64,28 @@ const Nav = styled.nav`
   text-align: right;
 `;
 
-const testUl =  styled.ul.attrs((/* props */) => ({ tabIndex: 0 }))`
-  &li {
-    background-color: red;
-  }
-
-`;
-
-const Container = styled.div`
-  width: 100%;
-  min-height: 100vh;
-  padding-left: 20%;
-  padding-right: 20%;
-  box-sizing: border-box;
-  overflow: hidden;
-`;
-
 const Navbars = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
+  
+
+  @media screen and (max-width: 700px) {
+    background-color: yellow;
+  
+  }
 `;
 
-const Logos = styled.div`
+const Name = styled.div`
   // width: 50px;
   cursor: pointer;
   margin: 30px 0;
+
+  @media ${BREAKPOINTS.sm} {
+    font-size: 1.5rem;
+    color: red;
+    letter-spacing: -1px;
+  }
 `;
 
 
@@ -113,7 +115,7 @@ const MobileOnly = styled.span`
 
 
 
-console.log('efef',BREAKPOINTS.mdMin);
+// console.log('efef',BREAKPOINTS.mdMin);
 
 const OuterWrapper = styled.div`
   top: 0;
