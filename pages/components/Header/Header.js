@@ -5,6 +5,8 @@ import { useRouter } from 'next/router';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { MdOutlineLightMode,MdOutlineDarkMode } from 'react-icons/md';
 import React, { useState } from 'react'
+import { Back } from '@cred/neopop-web/lib/components';
+
 
 const clickData = () => {
   alert('clicked');
@@ -38,26 +40,39 @@ const Header = () => {
     //         </MobileOnly>
     //     </OuterWrapper>
     // </div>
+    <>
+    
+    <DesktopOnly>
       <Navbars>
-          <Name>
-            <h3>naveensingh.dev</h3>
-          </Name>
-          <Nav>
-            <ul className="ulk">
-              <li className="ulk_li"><a href="#"> Home</a></li>
-              <li className="ulk_li"><a href="#"> Projects</a></li>
-              <li className="ulk_li"><a href="#"> Blogs</a></li>
-              <li className="ulk_li"><a href="#"> Now</a></li>
-              <li className="ulk_li">
-                <MdOutlineLightMode size={20}/>
-                {/* <MdOutlineLightMode size={20} style={{display: showMe? "none": "block"}} onClick= {toggle} />
-                <MdOutlineDarkMode size={20}  style={{display: showMe? "block": "none"}}   onClick= {toggle}/> */}
-              </li>
-          </ul>
-          </Nav>
-      </Navbars>
+        <Name>
+          <h3>naveensingh.dev</h3>
+        </Name>
+        <Nav>
+          <ul className="ulk">
+            <li className="ulk_li"><a href="#"> Home</a></li>
+            <li className="ulk_li"><a href="#"> Projects</a></li>
+            <li className="ulk_li"><a href="#"> Blogs</a></li>
+            <li className="ulk_li"><a href="#"> Now</a></li>
+            <li className="ulk_li">
+              <MdOutlineLightMode size={20}/>
+            </li>
+        </ul>
+        </Nav>
+    </Navbars>
+    </DesktopOnly>
+    {/* <MobileOnly>
+      <Div>
+        <AiOutlineMenu size={35}/>
+      </Div>
+    </MobileOnly> */}
+    </>
   );
 }
+
+const Div = styled.div`
+  display: flex;
+`;
+
 
 const Nav = styled.nav`
   flex: 1;
@@ -70,27 +85,31 @@ const Navbars = styled.div`
   align-items: center;
   
 
-  @media screen and (max-width: 700px) {
-    background-color: yellow;
-  
-  }
+  // @media screen and (max-width: 700px) {
+  //   width: 100%;
+  //   background: linear-gradient(#ff54a2,#ff575a);
+  //   position: absolute;
+  //   top: 15px;
+  //   right: 0;
+  //   z-index: 2;
+  // }
 `;
 
 const Name = styled.div`
   // width: 50px;
   cursor: pointer;
-  margin: 30px 0;
+  margin: 32px 0;
 
-  @media ${BREAKPOINTS.sm} {
-    font-size: 1.5rem;
-    color: red;
-    letter-spacing: -1px;
+  @media screen and (max-width: 700px) {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin: 10px 10px;
   }
 `;
 
 
 const DesktopOnly = styled.span`
-  @media ${BREAKPOINTS.sm} {
+  @media ${BREAKPOINTS.md} {
     display: none;
   }
 `;

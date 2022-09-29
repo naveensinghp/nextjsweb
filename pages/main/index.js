@@ -1,35 +1,28 @@
-import { AiFillGithub,AiOutlineTwitter,AiFillLinkedin } from 'react-icons/ai';
-import Image from 'next/image'
+import Paragraph from "../components/Paragraph/Paragraph";
+import styled from 'styled-components';
+import { BREAKPOINTS } from "../constants";
+
+
 
 const MainContent = () => {
     return (
         <>
-         <Nav/>
-       
-        <div className="">
-            <div className='banner-right'>
-                <div className="nameintro">
-                    <div>Hello! I'm <span className="tetsName">
-                        NaveenSing</span>
-                       
-                    </div>
-                    <p>
-                        Front End Developer
-                    </p>
-                    
-                    <ul className='socialmedia-navigation flex'>
-                        <li><AiOutlineTwitter size={28} /> </li>
-                        <li><AiFillGithub size={28} /> </li>
-                        <li><AiFillLinkedin size={28} /></li>
-                    </ul>
-                <div>
-            </div>
-            </div>
-            <img src='/assets/images/banner_test.png' width={500}/>
-        </div>
-    </div>
-    </>
+            <Wrapper>
+                <h1>Hi, I’m NaveenSingh.</h1>
+                <Paragraph>
+                    I’m a full-stack engineer, a designer, and a content creator. I work at <a href="#">Google</a> as <b>Developer Advocate</b> and core a member of <b>Facebook Team</b> 
+                </Paragraph>
+            </Wrapper>
+           
+        </>
     );
 }
 
+const Wrapper = styled.div`
+  margin-top: 2rem;
+  @media ${BREAKPOINTS.sm} {
+    font-size: 0.7rem;
+    margin-bottom: 1.5rem;
+  }
+`
 export default MainContent
