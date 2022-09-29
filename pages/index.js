@@ -8,7 +8,7 @@ import MainContent from './main';
 
 const Home = () => {
     return (
-        <Container>
+          <>
           <img id="shape_top" src="https://lukaszadam.com/assets/images/shape_top.svg" alt="free illustration shape"></img>
             <Head>
             <title>Create Next App</title>
@@ -17,13 +17,12 @@ const Home = () => {
           </Head>
           <main>
             <Header/>
-            <MainContent/>
-            <Spacing>
+            {/* <MainContent/> */}
+            {/* <Spacing>
                 <h3>Recent blog posts.</h3>
-              </Spacing>
+            </Spacing> */}
           </main>
-        </Container>
-        
+          </>
     );
 }
 

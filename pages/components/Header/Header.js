@@ -19,58 +19,68 @@ const Header = () => {
     setShowMe(!showMe);
   }
   return (
-    // <div>
-    //     <OuterWrapper>
-    //         <DesktopOnly>
-    //         <h4>naveensingh.dev</h4>
-    //             <Navigation>
-    //                 <Link href="/about"> 
-    //                     <a>Create</a>
-    //                 </Link>
-    //                 <Link href="/about"> 
-    //                     <a>About me</a>
-    //                 </Link>
-    //                 <Link href="/about"> 
-    //                     <a>Projects</a>
-    //                 </Link>
-    //             </Navigation>
-    //         </DesktopOnly>
-    //         <MobileOnly>
-    //           <AiOutlineMenu onClick={clickData} size={35}/>
-    //         </MobileOnly>
-    //     </OuterWrapper>
-    // </div>
+    // <Link href="/about"> 
+    // <a>About me</a>
+    // </Link>
     <>
-    
     <DesktopOnly>
-      <Navbars>
-        <Name>
-          <h3>naveensingh.dev</h3>
-        </Name>
-        <Nav>
-          <ul className="ulk">
-            <li className="ulk_li"><a href="#"> Home</a></li>
-            <li className="ulk_li"><a href="#"> Projects</a></li>
-            <li className="ulk_li"><a href="#"> Blogs</a></li>
-            <li className="ulk_li"><a href="#"> Now</a></li>
-            <li className="ulk_li">
-              <MdOutlineLightMode size={20}/>
-            </li>
-        </ul>
-        </Nav>
-    </Navbars>
+        <OuterWrapper>
+          <Navbars>
+            <Name>
+              <h3>naveensingh.dev</h3>
+            </Name>
+            <Nav>
+              <ul className="ulk">
+                <li className="ulk_li"><a href="#"> Home</a></li>
+                <li className="ulk_li"><a href="#"> Projects</a></li>
+                <li className="ulk_li"><a href="#"> Blogs</a></li>
+                <li className="ulk_li"><a href="#"> Now</a></li>
+                <li className="ulk_li">
+                  <MdOutlineLightMode size={20}/>
+                </li>
+            </ul>
+            </Nav>
+          </Navbars>
+        </OuterWrapper>
     </DesktopOnly>
-    {/* <MobileOnly>
-      <Div>
-        <AiOutlineMenu size={35}/>
-      </Div>
-    </MobileOnly> */}
+    <MobileOnly>
+      <Outer>
+        <div style={{padding: '20px'}}>
+          <h3>Naveensingh.</h3>
+        </div>
+        <div style={{margin: '15px'}}>
+          <AiOutlineMenu size={35}/>
+        </div>
+        
+      </Outer>
+      <MobileMenu>
+        {/* <Link href="#"> 
+          <a>About me</a>
+        </Link> */}
+      </MobileMenu>
+    </MobileOnly>
     </>
   );
 }
 
-const Div = styled.div`
-  display: flex;
+const Outer = styled.div`
+  display : flex;
+  justify-content :space-between;
+  flex-direction: row;
+`
+
+const MobileMenu = styled.div`
+  position : absolute;
+
+`;
+
+const OuterWrapper = styled.div`
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 25%;
+  padding-right: 20%;
+  box-sizing: border-box;
+  overflow: hidden;
 `;
 
 
@@ -99,12 +109,6 @@ const Name = styled.div`
   // width: 50px;
   cursor: pointer;
   margin: 32px 0;
-
-  @media screen and (max-width: 700px) {
-    font-size: 1rem;
-    letter-spacing: 1px;
-    margin: 10px 10px;
-  }
 `;
 
 
@@ -136,14 +140,6 @@ const MobileOnly = styled.span`
 
 // console.log('efef',BREAKPOINTS.mdMin);
 
-const OuterWrapper = styled.div`
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 2;
-  border-bottom: ${props =>
-    props.showBorder && '1px solid rgba(255, 255, 255, 0.06)'};
-`;
 
 
 export default Header;

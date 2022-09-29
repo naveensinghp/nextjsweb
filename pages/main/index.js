@@ -7,13 +7,14 @@ import { BREAKPOINTS } from "../constants";
 const MainContent = () => {
     return (
         <>
-            <Wrapper>
-                <h1>Hi, I’m NaveenSingh.</h1>
-                <Paragraph>
-                    I’m a full-stack engineer, a designer, and a content creator. I work at <a href="#">Google</a> as <b>Developer Advocate</b> and core a member of <b>Facebook Team</b> 
-                </Paragraph>
-            </Wrapper>
-           
+            <DesktopOnly>
+                <Wrapper>
+                    <h1>Hi, I’m NaveenSingh.</h1>
+                    <Paragraph>
+                        I’m a full-stack engineer, a designer, and a content creator. I work at <a href="#">Google</a> as <b>Developer Advocate</b> and core a member of <b>Facebook Team</b> 
+                    </Paragraph>
+                </Wrapper>
+            </DesktopOnly>
         </>
     );
 }
@@ -25,4 +26,12 @@ const Wrapper = styled.div`
     margin-bottom: 1.5rem;
   }
 `
+
+const DesktopOnly = styled.span`
+  @media ${BREAKPOINTS.md} {
+    display: none;
+  }
+`;
+
+
 export default MainContent

@@ -200,7 +200,36 @@ p, h1, h2, h3, h4, h5, h6 {
   text-decoration: none;
   font-size: 16px;
   font-weight: bolder;
-  color: gray;
+  color: black;
+}
+
+.ulk .ulk_li a:hover{
+  color: #ff55ea;  
+}
+.ulk .ulk_li a:hover:after{
+  width: 100%;
+  /* color: #ff55ea; */
+}
+.ulk .ulk_li a {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  /* padding: 0 10px; */
+}
+
+.ulk .ulk_li a:after{
+  content: "";
+  position: absolute;
+  background-color: hotpink;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  border-radius: 20px;
+  height: 4px;
+  transition: 0.3s;
 }
 
 .primary-navigation{
