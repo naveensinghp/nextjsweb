@@ -7,24 +7,34 @@ import { UNIT,COLORS } from '../../constants';
 
 const Footer = ({theme}) => {
     return (
-        <Wrapper>
-        <CopyrightArea>
-            <Line>
-                <strong>© 2022-present NaveenSingh.</strong> All rights reserved.
-            </Line>
-            
-        </CopyrightArea>
-    </Wrapper>
+      <FooterStart>
+        <FooterContent>
+          <CopyrightArea>
+              <Line>
+                  <strong>© 2022-present NaveenSingh.</strong> All rights reserved.
+              </Line>
+          </CopyrightArea>
+        </FooterContent>
+      </FooterStart>
+        
     )
 }
 
-const Wrapper = styled.div`
+const FooterContent = styled.div`
+  margin-top: auto;
   padding: ${UNIT * 4}px 0px;
   background-color: ${COLORS.black};
 
 `;
 
-const Line = styled.div``;
+const FooterStart = styled.div`
+margin-top: auto;
+`
+
+
+const Line = styled.div`
+text-align: center;
+`;
 
 const Spacer = styled.span`
     width: 8;
@@ -34,7 +44,6 @@ const Spacer = styled.span`
 
 const CopyrightArea = styled.div`
   display: inline-block;
-  text-align: right;
   font-size: 14px;
   color: ${COLORS.white};
 
