@@ -21,7 +21,10 @@ const Footer = ({theme}) => {
 }
 
 const FooterContent = styled.div`
-  margin-top: auto;
+  // margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: ${UNIT * 4}px 0px;
   background-color: ${COLORS.black};
 
