@@ -18,7 +18,7 @@ const Home = () => {
             </Head>
           <main>
             <Header/>
-            {/* <MainContent/> */}
+            <MainContent/>
             {/* <Spacing>
                 <h3>Recent blog posts.</h3>
             </Spacing> */}

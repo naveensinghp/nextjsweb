@@ -7,18 +7,29 @@ import { UNIT,COLORS } from '../../constants';
 
 const Footer = ({theme}) => {
     return (
+      
       <FooterStart>
         <FooterContent>
           <CopyrightArea>
               <Line>
+                  <h4>Thanks For Visit</h4>
                   <strong>© 2022-present NaveenSingh.</strong> All rights reserved.
               </Line>
           </CopyrightArea>
         </FooterContent>
       </FooterStart>
-        
+      
     )
 }
+
+const OuterWrapper = styled.div`
+  width: 100%;
+  //min-height: 100vh;
+  padding-left: 25%;
+  padding-right: 20%;
+  box-sizing: border-box;
+  overflow: hidden;
+`;
 
 const FooterContent = styled.div`
   // margin-top: auto;
