@@ -17,7 +17,7 @@ const MainContent = () => {
                     I’m a full-stack Developer, a designer, and a content creator. I work at <a href="#">Vidsyoft</a> as <b>Team Lead</b> and core a member of <b>Facebook Team</b> 
                 </Paragraph>
                  {/* SOCIAL MEDIA ICONS  */}
-                  <Social>
+                  {/* <Social>
                     <div className="cardTest" style={{color: 'blue'}}>
                         Twitter
                     </div>
@@ -27,7 +27,7 @@ const MainContent = () => {
                     <div className="cardTest" style={{color: 'purple'}}>
                         Linkdein
                     </div>
-                  </Social>
+                  </Social> */}
                 <h3>Recent blog posts.</h3>
                   <div className="card-container">
                       <a className="card" href="#">

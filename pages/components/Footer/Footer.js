@@ -7,28 +7,108 @@ import { UNIT,COLORS } from '../../constants';
 
 const Footer = ({theme}) => {
     return (
-      
-      <FooterStart>
-        <FooterContent>
-          <CopyrightArea>
-              <Line>
-                  <h4>Thanks For Visit</h4>
-                  <strong>© 2022-present NaveenSingh.</strong> All rights reserved.
-              </Line>
-          </CopyrightArea>
-        </FooterContent>
-      </FooterStart>
+      <OuterWrapper>
+        <Row>
+          <Col>
+              <h3>naveensingh.dev</h3>  
+              <p>Thanks for visiting</p>
+              <p>© 2022-present NaveenSingh. All rights reserved.</p>
+          </Col>
+          <Col>
+            <p>ITPL Road</p>
+            <p>Whitefield Bangalore</p>
+            <p>Karanataka, PIN 50034, India</p>
+            <p>naveensingh.mtp@gmail.com</p>
+            <h4>+91 - 0239940448</h4>
+          </Col>
+          <Col>
+          <Ul>
+              <li>
+                <a href="">Uses</a>
+              </li>
+              <li>
+                    <a href="">Gear</a>
+              </li>
+              <li>
+                    <a href="">Bookmarks</a>
+              </li>
+              <li>
+                  <a href="">Books</a>
+              </li>
+          </Ul>
+            {/* <ul>
+                <li>
+                    <a href="">Uses</a>
+                </li>
+                <li>
+                    <a href="">Gear</a>
+                </li>
+                <li>
+                    <a href="">Bookmarks</a>
+                </li>
+                <li>
+                    <a href="">Books</a>
+                </li>
+            </ul> */}
+          </Col>
+        </Row>
+      </OuterWrapper>
+      // <FooterStart>
+      //   <FooterContent>
+      //     <CopyrightArea>
+      //         <Line>
+      //             <h4>Thanks For Visit</h4>
+      //             <strong>© 2022-present NaveenSingh.</strong> All rights reserved.
+      //         </Line>
+      //     </CopyrightArea>
+      //   </FooterContent>
+      // </FooterStart>
       
     )
 }
 
 const OuterWrapper = styled.div`
   width: 100%;
-  //min-height: 100vh;
-  padding-left: 25%;
-  padding-right: 20%;
-  box-sizing: border-box;
-  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  background-color: #c7e4f5;
+  color: black;
+  padding: 100px 0 30px;
+  font-size: 14px;
+  line-height: 30px;
+`;
+
+const Ul = styled.ul`
+  & li {
+    list-style: none;
+  }
+  & a {
+    text-decoration: none;
+    color: black;
+  }
+
+`
+
+const Row = styled.div`
+  width: 85%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+`;
+
+const Col = styled.div`
+  flex-basis: 25%;
+  padding: 10px;
+
+  & h3{
+    width: fit-content;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
 `;
 
 const FooterContent = styled.div`
