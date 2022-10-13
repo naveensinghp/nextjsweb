@@ -2,6 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
 import { UNIT,COLORS } from '../../constants';
+import { FaTwitter,FaGithub,FaLinkedin  } from 'react-icons/fa';
 
 
 
@@ -10,16 +11,21 @@ const Footer = ({theme}) => {
       <OuterWrapper>
         <Row>
           <Col>
-              <h3>naveensingh.dev</h3>  
-              <p>Thanks for visiting</p>
-              <p>© 2022-present NaveenSingh. All rights reserved.</p>
+              <h3>naveensingh.dev</h3>
+              <Soical>
+                  <FaTwitter size={16} />
+                  <FaGithub size={16} />
+                  <FaLinkedin size={16}/>
+              </Soical>  
+              {/* <b>Thanks for visiting!</b> */}
           </Col>
+         
           <Col>
-            <p>ITPL Road</p>
+            {/* <p>ITPL Road</p>
             <p>Whitefield Bangalore</p>
             <p>Karanataka, PIN 50034, India</p>
             <p>naveensingh.mtp@gmail.com</p>
-            <h4>+91 - 0239940448</h4>
+            <h4>+91 - 0239940448</h4> */}
           </Col>
           <Col>
           <Ul>
@@ -36,36 +42,20 @@ const Footer = ({theme}) => {
                   <a href="">Books</a>
               </li>
           </Ul>
-            {/* <ul>
-                <li>
-                    <a href="">Uses</a>
-                </li>
-                <li>
-                    <a href="">Gear</a>
-                </li>
-                <li>
-                    <a href="">Bookmarks</a>
-                </li>
-                <li>
-                    <a href="">Books</a>
-                </li>
-            </ul> */}
           </Col>
         </Row>
+        <p style={{fontSize: '13px',marginTop: '2.5rem'}}>© 2022-present NaveenSingh. All rights reserved.</p>
       </OuterWrapper>
-      // <FooterStart>
-      //   <FooterContent>
-      //     <CopyrightArea>
-      //         <Line>
-      //             <h4>Thanks For Visit</h4>
-      //             <strong>© 2022-present NaveenSingh.</strong> All rights reserved.
-      //         </Line>
-      //     </CopyrightArea>
-      //   </FooterContent>
-      // </FooterStart>
       
     )
 }
+
+const Soical = styled.div`
+  display: flex;
+  justify-content: flex-start;
+  gap: 16px;
+  cursor: pointer;
+`;
 
 const OuterWrapper = styled.div`
   width: 100%;
@@ -73,7 +63,7 @@ const OuterWrapper = styled.div`
   bottom: 0;
   background-color: #c7e4f5;
   color: black;
-  padding: 100px 0 30px;
+  padding: 40px 0 20px;
   font-size: 14px;
   line-height: 30px;
 `;
@@ -101,49 +91,14 @@ const Row = styled.div`
 
 const Col = styled.div`
   flex-basis: 25%;
-  padding: 10px;
+  padding: 10px 100px;
 
   & h3{
     width: fit-content;
-    margin-bottom: 40px;
+    margin-bottom: 10px;
     position: relative;
   }
 
 `;
 
-const FooterContent = styled.div`
-  // margin-top: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: ${UNIT * 4}px 0px;
-  background-color: ${COLORS.black};
-
-`;
-
-const FooterStart = styled.div`
-margin-top: auto;
-`
-
-
-const Line = styled.div`
-text-align: center;
-`;
-
-const Spacer = styled.span`
-    width: 8;
-    height: 8;
-    display: inline-block;
-`;
-
-const CopyrightArea = styled.div`
-  display: inline-block;
-  font-size: 14px;
-  color: ${COLORS.white};
-
-  @media (max-width: 600px) {
-    margin-top: ${UNIT * 4}px;
-    text-align: center;
-  }
-`;
 export default Footer;

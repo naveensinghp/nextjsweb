@@ -12,27 +12,27 @@ const MainContent = () => {
         <>
             <Wrapper>
               <OuterWrapper>
-              <h1>Hi, I’m NaveenSingh.</h1>
+                <NameStyle>
+                  Hi, I’m NaveenSingh.
+                </NameStyle>
                 <Paragraph style={{letterSpacing: '0.5px'}}>
-                    I’m a full-stack Developer, a designer, and a content creator. I work at <a href="#">Vidsyoft</a> as <b>Team Lead</b> and core a member of <b>Facebook Team</b> 
+                    I’m a Software Developer, a designer, and a content creator. Where I work at <a href="#">VIDSYSOFT TECH</a> as <b>Team Lead</b> and who trying to be good developer on daily 
                 </Paragraph>
-                 {/* SOCIAL MEDIA ICONS  */}
-                  {/* <Social>
-                    <div className="cardTest" style={{color: 'blue'}}>
-                        Twitter
-                    </div>
-                    <div className="cardTest" style={{color: 'black'}}>
-                        Github 
-                    </div>
-                    <div className="cardTest" style={{color: 'purple'}}>
-                        Linkdein
-                    </div>
-                  </Social> */}
                 <h3>Recent blog posts.</h3>
+                <ViewallBlogWrapper>
+                  <ViewAll>
+                      View All
+                  </ViewAll>
+                </ViewallBlogWrapper>
                   <div className="card-container">
                       <a className="card" href="#">
                           {/* <svg className="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg> */}
-                          <span>Creating and using API Routes in Next.js</span>
+                          <span>
+                            <h3>
+                            Things to Focus Before Begin Developer
+                            </h3>
+                            
+                            </span> 
                           <svg className="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
                       </a>
                   </div>
@@ -44,6 +44,23 @@ const MainContent = () => {
     );
 }
 
+const ViewallBlogWrapper = styled.div`
+  flex: 1;
+  text-align: right;
+`;
+
+const ViewAll = styled.span`
+color: #805ad5;
+font-weight: bold;
+font-size: 13px;
+cursor: pointer;
+`;
+
+
+const NameStyle = styled.h1`
+letter-spacing: 0.9px
+
+`;
 
 const Social = styled.div`
   display: flex;
