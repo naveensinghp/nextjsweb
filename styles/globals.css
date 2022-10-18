@@ -227,16 +227,16 @@ p, h1, h2, h3, h4, h5, h6 {
 
 .cardTest {
   all: unset;
-  border-radius: 4px;
-  /* border: 1px solid #eee; */
-  /* background-color: #fafafa; */
-  height: 10px;
-  width: 100px;
+  border-radius: 14px;
+  /* border: 1px solid #eee;*/
+  /* background-color: aquamarine;  */
+  height: 125px;
+  width: 100%;
   margin: 0 8px 16px;
-  padding: 16px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   transition: all 0.2s ease-in-out;
   line-height: 24px;
@@ -257,13 +257,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 .card {
   all: unset;
-  border-radius: 4px;
-  /* border: 1px solid #eee; */
-  /* background-color: #fafafa; */
-  height: 40px;
-  width: 400px;
+  border-radius: 14px;
+  /* border: 1px solid #eee;*/
+  /* background-color: aquamarine;  */
+  height: 111px;
+  width: 100%;
   margin: 0 8px 16px;
-  padding: 16px;
+  padding: 10px;
   display: flex;
   flex-direction: row;
   justify-content: start;
@@ -287,8 +287,10 @@ svg.material-icons:not(:last-child) {
   fill: #888;
 }
 .card-container .card:not(.highlight-card):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);
+  /* transform: translateY(-3px);
+  box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35); */
+  transform: translateY(-10px);
+  background-color: #edf2f7;
 }
 
 .card-container .card:not(.highlight-card):hover .material-icons path {

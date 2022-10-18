@@ -1,13 +1,14 @@
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
-import { UNIT,COLORS } from '../../constants';
+import { UNIT,COLORS, BREAKPOINTS } from '../../constants';
 import { FaTwitter,FaGithub,FaLinkedin  } from 'react-icons/fa';
 
 
 
 const Footer = ({theme}) => {
     return (
+      <DesktopOnly>
       <OuterWrapper>
         <Row>
           <Col>
@@ -18,6 +19,7 @@ const Footer = ({theme}) => {
                   <FaLinkedin size={16}/>
               </Soical>  
               {/* <b>Thanks for visiting!</b> */}
+              <p style={{fontSize: '13px',marginTop: '2.5rem'}}>© 2022-present NaveenSingh. All rights reserved.</p>
           </Col>
          
           <Col>
@@ -44,11 +46,16 @@ const Footer = ({theme}) => {
           </Ul>
           </Col>
         </Row>
-        <p style={{fontSize: '13px',marginTop: '2.5rem'}}>© 2022-present NaveenSingh. All rights reserved.</p>
       </OuterWrapper>
-      
+      </DesktopOnly>
     )
 }
+
+const DesktopOnly = styled.span`
+  @media ${BREAKPOINTS.sm} {
+    display: none;
+  }
+`;
 
 const Soical = styled.div`
   display: flex;
