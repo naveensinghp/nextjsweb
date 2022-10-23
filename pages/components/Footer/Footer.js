@@ -7,50 +7,91 @@ import { FaTwitter,FaGithub,FaLinkedin  } from 'react-icons/fa';
 
 
 const Footer = ({theme}) => {
-    return (
-      <DesktopOnly>
-      <OuterWrapper>
-        <Row>
-          <Col>
-              <h3>naveensingh.dev</h3>
-              <Soical>
-                  <FaTwitter size={16} />
-                  <FaGithub size={16} />
-                  <FaLinkedin size={16}/>
-              </Soical>  
-              {/* <b>Thanks for visiting!</b> */}
-              <p style={{fontSize: '13px',marginTop: '2.5rem'}}>© 2022-present NaveenSingh. All rights reserved.</p>
-          </Col>
-         
-          <Col>
-            {/* <p>ITPL Road</p>
-            <p>Whitefield Bangalore</p>
-            <p>Karanataka, PIN 50034, India</p>
-            <p>naveensingh.mtp@gmail.com</p>
-            <h4>+91 - 0239940448</h4> */}
-          </Col>
-          <Col>
-          <Ul>
-              <li>
-                <a href="">Uses</a>
-              </li>
-              <li>
-                    <a href="">Gear</a>
-              </li>
-              <li>
-                    <a href="">Bookmarks</a>
-              </li>
-              <li>
-                  <a href="">Books</a>
-              </li>
-          </Ul>
-          </Col>
-        </Row>
-      </OuterWrapper>
-      </DesktopOnly>
-    )
+    // return (
+    //   <DesktopOnly>
+    //   <OuterWrapper>
+    //     <Row>
+    //       <Col>
+    //           <h3>naveensingh.dev</h3>
+    //           <Soical>
+    //               <FaTwitter size={16} />
+    //               <FaGithub size={16} />
+    //               <FaLinkedin size={16}/>
+    //           </Soical>  
+    //           {/* <b>Thanks for visiting!</b> */}
+    //           <p style={{fontSize: '13px',marginTop: '2.5rem'}}>© 2022-present NaveenSingh. All rights reserved.</p>
+    //       </Col>
+    //       <Col>
+    //       <Ul>
+    //           <li>
+    //             <a href="">Uses</a>
+    //           </li>
+    //           <li>
+    //                 <a href="">Gear</a>
+    //           </li>
+    //           <li>
+    //                 <a href="">Bookmarks</a>
+    //           </li>
+    //           <li>
+    //               <a href="">Books</a>
+    //           </li>
+    //       </Ul>
+    //       </Col>
+    //     </Row>
+    //   </OuterWrapper>
+    //   </DesktopOnly>
+    // )
+    return(
+      <>
+        <Wrapper>
+          <Copyright>
+          All that stuff up there was written by me, <Name>NaveenSingh</Name>. All
+          rights reserved.
+          </Copyright>
+          <Icons>
+              <FaTwitter size={30} />
+              <FaGithub size={30} />
+              <FaLinkedin size={30}/>
+          </Icons>
+        </Wrapper>
+      </>
+    );
 }
 
+const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
+background: #edf2f7;
+margin: 10px;
+padding: 40px 0 20px;
+line-height: 30px;
+position: absolute;
+bottom: 0;
+width: 100%;
+color: black`;
+
+
+
+
+
+const Copyright = styled.div`
+font-size: 16px;
+text-align: center;
+`;
+
+const Name = styled.span`
+  font-weight: 600;
+`;
+
+
+const Icons = styled.div`
+display: inline-flex;
+justify-content: space-between;
+margin: auto;
+gap: 15px;
+margin-top: 20px;
+
+`;
 const DesktopOnly = styled.span`
   @media ${BREAKPOINTS.sm} {
     display: none;

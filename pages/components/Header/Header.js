@@ -19,9 +19,6 @@ const Header = () => {
     setShowMe(!showMe);
   }
   return (
-    // <Link href="/about"> 
-    // <a>About me</a>
-    // </Link>
     <>
     <DesktopOnly>
         <OuterWrapper>
@@ -35,9 +32,9 @@ const Header = () => {
                 <li className="ulk_li"><a href="#"> Projects</a></li>
                 <li className="ulk_li"><a href="#"> Blogs</a></li>
                 <li className="ulk_li"><a href="#"> Now</a></li>
-                <li className="ulk_li">
+                {/* <li className="ulk_li">
                   <MdOutlineLightMode size={20}/>
-                </li>
+                </li> */}
             </ul>
             </Nav>
           </Navbars>

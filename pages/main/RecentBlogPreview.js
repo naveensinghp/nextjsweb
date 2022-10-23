@@ -1,15 +1,11 @@
 import React from "react";
+import styled from 'styled-components';
 
 function RecentBlogPreview(props) {
   const title = props.title;
   const createdDate = props.createdDate
   const blogHint = props.blogHint;
   return (
-    // <article>
-    //   <h2>{title}</h2>
-    //   <p>{desc}</p>
-    //   <a href="/">Read More</a>
-    // </article>
     <div className="card-container">
           <a className="card" href="#">
               <span>
@@ -21,7 +17,9 @@ function RecentBlogPreview(props) {
                     </span>
                 </h3>
               </span> 
+              
           </a>
+        
       </div>
   );
 }

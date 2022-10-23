@@ -4,6 +4,7 @@ import { BREAKPOINTS } from "../constants";
 // import { HiArrowUpRight} from 'react-icons/ai';
 import { BsArrowRight} from 'react-icons/bs';
 import RecentBlogPreview from "./RecentBlogPreview";
+import Divider from "../components/Divider/divider";
 
 
 
@@ -16,27 +17,34 @@ const MainContent = () => {
                 <NameStyle>
                   Hi, I’m NaveenSingh.
                 </NameStyle>
+                <br/>
                 <Paragraph style={{letterSpacing: '0.5px'}}>
-                    I’m a Software Developer, a designer,Where I live in India and Working at <a href="#">VIDSYSOFT TECH</a> as <b>Team Lead</b> and who trying to be good developer on daily life, Which i personally belives in life lies about<b>Imapct is Everything!!</b>
+                    I’m a Software Developer, Where I live in India and Working at <a href="#">VIDSYSOFT TECH</a> as <b>Team Lead</b>, Who trying to be good developer on daily life, Which i personally belives in life it lies all about <b> Imapct is Everything!!</b>
                 </Paragraph>
                 <br/>
+                <Paragraph style={{letterSpacing: '0.5px'}}>
+                This blog is my attempt to share the stuff I've learned often and i think the biggest motivation for me at first was just to remember things for myself I'm learning these new things and I want to make sure that I have a reference for myself.
+                </Paragraph>
+                <Divider/>
+              
                   <ViewallBlogWrapper>
                     <h3>Recent Blog </h3>
-                    <ViewAll>
+                    {/* <ViewAll>
                       View All  <BsArrowRight size={18}/>
-                    </ViewAll>
+                    </ViewAll> */}
                   </ViewallBlogWrapper>
                   <RecentBlogPreview
                     title="Things to Focus Before Begin Developer"
-                    createdDate="20 Jan 2022"
+                    createdDate="October 24th, 2022"
                     blogHint="How to create and use API Routes in Next.js"
                   />
-                  <RecentBlogPreview
+                 
+                  {/* <RecentBlogPreview
                     title="Understanding useMemo and useCallback"
                     createdDate="20 Jan 2022"
                     blogHint="How to create and use API Routes in Next.js"
-                  />
-                  <br/>
+                  /> */}
+                  
               </OuterWrapper>
             </Wrapper>
         </>
