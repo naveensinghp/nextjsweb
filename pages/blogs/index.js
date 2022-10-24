@@ -3,7 +3,6 @@ export default function Blogs(){
     return <>
         <div>
             <h2 className="blogt">Blog Page</h2>
-            <div className="headingactive"></div>
         </div>
     </>
 }

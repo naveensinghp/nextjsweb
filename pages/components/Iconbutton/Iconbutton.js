@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import IconBase from 'react-icons-kit';
+import styled from 'styled-components';
 
 
 
@@ -10,9 +10,9 @@ export const Iconbutton = ({
     const Wrapper = href ? LinkWrapper : ButtonWrapper;
     return (
         <Wrapper href={href} {...delegated}>
-             <IconWrapper>
+             {/* <IconWrapper>
                 <IconBase icon={icon} style={{ color }} size={size} />
-            </IconWrapper>
+            </IconWrapper> */}
         </Wrapper>
     );
 }
@@ -30,9 +30,6 @@ const LinkWrapper = styled(Link)`
 `;
 
 
-const ButtonWrapper = styled(InvisibleButton)`
-  position: relative;
-  display: inline-block;
-`;
+
 
 export default Iconbutton;
