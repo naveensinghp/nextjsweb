@@ -1,10 +1,10 @@
-import Paragraph from "../components/Paragraph/Paragraph";
+import Paragraph from "../../components/Paragraph";
 import styled from 'styled-components';
-import { BREAKPOINTS } from "../constants";
 // import { HiArrowUpRight} from 'react-icons/ai';
 import { BsArrowRight} from 'react-icons/bs';
 import RecentBlogPreview from "./RecentBlogPreview";
-import Divider from "../components/Divider/divider";
+import Divider from "../../components/Divider";
+import { BREAKPOINTS } from "../../constant";
 
 
 

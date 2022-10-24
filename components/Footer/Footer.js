@@ -1,8 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 import styled from 'styled-components';
-import { UNIT,COLORS, BREAKPOINTS } from '../../constants';
+// import { UNIT,COLORS, BREAKPOINTS } from '../../constants';
 import { FaTwitter,FaGithub,FaLinkedin  } from 'react-icons/fa';
+import { UNIT,COLORS,BREAKPOINTS } from '../../constant';
 
 
 

@@ -1,4 +1,6 @@
-import { BREAKPOINT_SIZES, IS_MOBILE_USER_AGENT } from '../constants';
+import { BREAKPOINT_SIZES,IS_MOBILE_USER_AGENT } from "../../constant";
+
+
 
 export const getBreakpointFor = windowWidth =>
   Object.keys(BREAKPOINT_SIZES).find(

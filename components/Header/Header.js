@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import styled from 'styled-components';
-import { COLORS,BREAKPOINTS } from '../../constants'
+// import { COLORS,BREAKPOINTS } from '../../constants'
 import { useRouter } from 'next/router';
 import { AiOutlineMenu } from 'react-icons/ai';
 import { MdOutlineLightMode,MdOutlineDarkMode } from 'react-icons/md';
 import React, { useState } from 'react'
 import { Back } from '@cred/neopop-web/lib/components';
+import { COLORS,BREAKPOINTS } from '../../constant';
 
 
 const clickData = () => {
